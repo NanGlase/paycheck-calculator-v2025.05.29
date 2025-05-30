@@ -314,13 +314,13 @@
 
     function incrementRate() {
         const rateInput = document.getElementById('rate');
-        rateInput.value = (parseFloat(rateInput.value) + 10).toFixed(2);
+        rateInput.value = (parseFloat(rateInput.value) + 10);
     }
 
     function decrementRate() {
         const rateInput = document.getElementById('rate');
         let val = parseFloat(rateInput.value);
-        if (val > 10) rateInput.value = (val - 10).toFixed(2);
+        if (val > 10) rateInput.value = (val - 10);
     }
 
     function incrementSSS() {
