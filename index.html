@@ -156,7 +156,7 @@
     <div class="sub-title">Paycheck Calculator v2025.05.29</div>
     <form onsubmit="event.preventDefault(); calculateSalary();">
         <div class="input-group">
-            <label for="days">Number of days (OT):</label>
+            <label for="days">Number of days worked:</label>
             <div class="count-box">
                 <button type="button" onclick="decrementDays()">-</button>
                 <input type="number" id="days" name="days" class="input-field" value="10" step="any">
@@ -164,7 +164,7 @@
             </div>
         </div>
         <div class="input-group">
-            <label for="rate">Rate per OT (PHP):</label>
+            <label for="rate">Rate per day (PHP):</label>
             <div class="count-box">
                 <button type="button" onclick="decrementRate()">-</button>
                 <input type="number" id="rate" name="rate" class="input-field" value="600" step="any">
@@ -204,7 +204,7 @@
             <p><span>Gross Salary:</span> <span id="grosssalary"></span></p>
             <p><span id="sssLabel">SSS (5.0%):</span> <span id="sssDeduction"></span></p>
             <p><span id="pagibigLabel">Pag-ibig (2.0%):</span> <span id="pagibigDeduction"></span></p>
-            <p><span id="philhealthLabel">PhilHealth (2.5%):</span> <span id="philhealthAmount"></span></p>
+            <p><span id="philhealthLabel">PhilHealth (2.5%):</span> <span id="philhealthDeduction"></span></p>
             <p><span>Total deduction:</span> <span id="totalDeduction"></span></p>
             <p><span>NET Salary:</span> <span id="netSalary"></span></p>
         </div>
@@ -277,7 +277,7 @@
         document.getElementById('grosssalary').textContent = 'PHP ' + grossSalary.toFixed(2);
         document.getElementById('sssDeduction').textContent = 'PHP ' + sssDeduction;
         document.getElementById('pagibigDeduction').textContent = 'PHP ' + pagibigDeduction;
-        document.getElementById('philhealthAmount').textContent = 'PHP ' + philhealthDeduction;
+        document.getElementById('philhealthDeduction').textContent = 'PHP ' + philhealthDeduction;
         document.getElementById('totalDeduction').textContent = 'PHP ' + totalDeduction;
         document.getElementById('netSalary').textContent = 'PHP ' + netSalary;
 
